@@ -1,0 +1,40 @@
+<div class="">  
+    <div class="global-container">  
+      <div class="card login-form">  
+      <div class="card-body">  
+          <img style="height: 100px;width: 100%;" src="../../../assets/images/logo.jpg" alt="">  
+          <div class="card-text">  
+              <form>  
+                  <div class="form-group">  
+                      <label for="exampleInputEmail1"> {{ 'userid' | translate }} </label>  
+                      <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>  
+                  <div class="form-group">  
+                      <label for="exampleInputPassword1">{{'password' | translate}} </label>  
+                      <a href="#" style="float:right;font-size:12px;"> {{'forgotpassword' | translate}} </a>  
+                      <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">  
+                  </div>  
+                  <div class="form-group">  
+                    <label for="languages"> {{'languages' | translate}} </label>  
+                     <select class="form-control form-control-sm" name="language" id="language"  (change)="changeLanguage($event.target.value)">
+                      <option value="" disabled selected>Choose your Location</option>
+                      <option value="french">91EL Anaheim</option>
+                      <option value="greece">91EL OCTA Store</option>
+                      <option value="en-US">91EL CSC WIC</option>
+                      <option value="en-US">91EL Call Center</option>
+                     </select>
+                </div>  
+                  <button type="submit" class="btn btn-primary btn-block" (click)="gotoSearchPage()"> {{'signin' | translate}} </button>  
+                    
+                  <div class="sign-up">  
+                      {{'donthaveaccount' | translate}} <a href="#"> {{'createone' | translate}} </a>  
+                  </div>  
+              </form>  
+          </div>  
+      </div>  
+  </div>  
+  </div>  
+  </div>
+  
+  
+  

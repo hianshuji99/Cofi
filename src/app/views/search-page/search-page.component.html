@@ -1,0 +1,190 @@
+<div class="container-fluid">
+    <div class="mx-5 mt-2">
+        <div class="row">
+            <img src="../../../assets/images/logo.jpg" alt="" style="width: 250px;height: 65px;">
+            <span style="border: 1px solid #c3bebe;
+            width: 30%;
+            margin: 12px 10px 12px 90px;
+            border-radius: 5px;">
+            <div class="form-group row">  
+                 <select class="form-control form-control-sm" name="language" id="language"  style=" margin: 10px;
+                 width: 40%;
+                 background: #7f8083;
+                 color: #fff;">
+                  <option value="">Account Search</option>
+                 </select>
+                 <input type="text" placeholder="Account#" name="search2" style="border: 0px;
+                 width: 30%;
+                 margin: 10px 10px 10px -10px;">
+                 <img src="../../../assets/images/search.png" alt="" style="width: 50px;
+                 height: 25px;
+                 margin: auto;">
+            </div> 
+            </span>
+            <div class="w-50 m-auto">
+                <span class="m-1" style="color: #8383e3;">
+                    Advance search
+                </span>
+                <span class="m-2"><span style="font-weight: bold;">Location:</span>91EL OCTA Store</span>
+                <span class="m-2"><span  style="font-weight: bold;">Shift#:</span>2022056096</span>
+                <span class="ml-5"><img src="../../../assets/images/user.png" alt="" style="    width: 25px;
+                    height: 25px;
+                    margin: 8px;">Arun Siripuram</span>
+            </div>            
+        </div>
+    </div>
+</div>
+<div class="" style="background-color: #d9913c;">
+    <div class="" style="  margin: 0% 3%;">
+        <img src="../../../assets/images/user.png" alt="" class="mx-5 my-2" style="    width: 35px;
+            height: 35px;">
+
+<img src="../../../assets/images/user.png" alt=""  class="mx-5 my-2" style="    width: 35px;
+height: 35px;">
+
+<img src="../../../assets/images/user.png" alt=""  class="mx-5 my-2" style="    width: 35px;
+            height: 35px;">
+
+<img src="../../../assets/images/user.png" alt="" class="mx-5 my-2" style="    width: 35px;
+height: 35px;">
+    </div>
+</div>
+<div  style="  margin: 0% 3%;">
+        <h4 class="my-3">{{'customersearch' | translate}}</h4>
+        <div class="card p-2">
+            <div class="row">
+                <div class="col-6">
+                    <label for=""><span style="font-weight:bold;">{{'searchby' | translate}}:</span><input class="m-1" type="radio">{{'customer' | translate}} <input class="m-1" type="radio">{{'violator' | translate}}</label>
+                </div>
+                <div class="col-6" style="text-align: right;">
+                    <span class="mx-5">{{'enterinany'|translate}}</span>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-3">
+                    <div class="form-group">  
+                        <label for="exampleInputEmail1"> {{'account' | translate}} # </label>  
+                        <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('account')" (focusout)="focusOutFunction('account')" aria-describedby="emailHelp"  [ngStyle]="account ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                    </div> 
+                </div>
+                <div class="col-3">
+                    <div class="form-group">  
+                        <label for="exampleInputEmail1"> {{'phone' | translate}} # </label>  
+                        <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('phone')" (focusout)="focusOutFunction('phone')" aria-describedby="emailHelp"  [ngStyle]="phone ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                    </div> 
+                </div>
+                <div class="col-3">
+                    <div class="form-group">  
+                        <label for="exampleInputEmail1"> {{'transponderid' | translate}} </label>  
+                        <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('transponderid')" (focusout)="focusOutFunction('transponderid')" aria-describedby="emailHelp"  [ngStyle]="transponderid ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                    </div> 
+                </div>
+                <div class="col-3">
+                    <div class="form-group">  
+                        <label for="exampleInputEmail1"> {{'plate' | translate}} # </label>  
+                        <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('plate')" (focusout)="focusOutFunction('plate')" aria-describedby="emailHelp"  [ngStyle]="plate ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                    </div> 
+                </div> 
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'licenseplatecountry' | translate}} </label>  
+                            <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('licenseplatecountry')" (focusout)="focusOutFunction('licenseplatecountry')" aria-describedby="emailHelp"  [ngStyle]="licenseplatecountry ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
+                            <option value="">-- Select -- </option>    
+                            </select>
+                        </div> 
+                    </div> 
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'licenseplatestate' | translate}} </label>  
+                            <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('licenseplatestate')" (focusout)="focusOutFunction('licenseplatestate')" aria-describedby="emailHelp"  [ngStyle]="licenseplatestate ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
+                                <option value="">-- Select -- </option>  
+                            </select>
+                        </div> 
+                    </div> 
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'trip' | translate}} # </label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('trip')" (focusout)="focusOutFunction('trip')" aria-describedby="emailHelp"  [ngStyle]="trip ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'accounttypes' | translate}} </label>  
+                            <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('accounttypes')" (focusout)="focusOutFunction('accounttypes')" aria-describedby="emailHelp"  [ngStyle]="accounttypes ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
+                                <option value="">-- Select -- </option>
+                            </select>
+                        </div> 
+                    </div>  
+                </div>   
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'accountstatus' | translate}} </label>  
+                            <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('accountstatus')" (focusout)="focusOutFunction('accountstatus')" aria-describedby="emailHelp"  [ngStyle]="accountstatus ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
+                                <option value="">-- Select -- </option>  
+                            </select>
+                        </div> 
+                    </div>  
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'attribute/flags' | translate}} </label>  
+                            <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('attribute')" (focusout)="focusOutFunction('attribute')" aria-describedby="emailHelp"  [ngStyle]="attribute ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
+                                <option value="">-- Select -- </option>
+                            </select>
+                        </div> 
+                    </div>  
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'firstname' | translate}} ({{'minimun3characters' | translate}}) </label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('firstname')" (focusout)="focusOutFunction('firstname')" aria-describedby="emailHelp"  [ngStyle]="firstname ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'lastname' | translate}}  ({{'minimun3characters' | translate}})</label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('lastname')" (focusout)="focusOutFunction('lastname')" aria-describedby="emailHelp"  [ngStyle]="lastname ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                </div>  
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'businessname' | translate}}  ({{'minimun3characters' | translate}})</label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('businessname')" (focusout)="focusOutFunction('businessname')" aria-describedby="emailHelp"  [ngStyle]="businessname ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'emailaddress' | translate}} </label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('emailaddress')" (focusout)="focusOutFunction('emailaddress')" aria-describedby="emailHelp"  [ngStyle]="emailaddress ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'address' | translate}}  ({{'minimun3characters' | translate}})</label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('address')" (focusout)="focusOutFunction('address')" aria-describedby="emailHelp"  [ngStyle]="address ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'city' | translate}}  ({{'minimun3characters' | translate}})</label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('city')" (focusout)="focusOutFunction('city')" aria-describedby="emailHelp"  [ngStyle]="city ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1"> {{'zipcode' | translate}} </label>  
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('zipcode')" (focusout)="focusOutFunction('zipcode')" aria-describedby="emailHelp"  [ngStyle]="zipcode ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">  
+                        </div> 
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <button class="btn btn-primary" style="width: 5%;margin: 10px;">{{'search' | translate}}</button>
+                    <button class="btn btn-secondary" style="width: 5%;margin: 10px;">{{'reset' | translate}}</button>
+                </div>
+            </div>
+        </div>
+</div>
