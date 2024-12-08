@@ -1,4 +1,3 @@
-import { Directionality } from '@angular/cdk/bidi';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,7 +10,7 @@ import { GlobalizationService } from 'src/app/Services/Globalization.service';
 })
 export class LoginPageComponent implements OnInit {
   languageMaster: any = [];
-  constructor(public translateService: TranslateService,private dir: Directionality, public router: Router,private service: GlobalizationService) {
+  constructor(public translateService: TranslateService, public router: Router,private service: GlobalizationService) {
   }
   ngOnInit(): void {
     this.GetLanguages();
@@ -30,11 +29,11 @@ export class LoginPageComponent implements OnInit {
     );
   }
   public changeLanguage(language: string): void {
-    if (language === 'AE' || language === 'IL') {
-      document.body.setAttribute('dir', 'rtl'); // Set Right-to-Left
-    } else {
-      document.body.setAttribute('dir', 'ltr'); // Set Left-to-Right
-    }
+    // if (language === 'AE' || language === 'IL') {
+    //   document.body.setAttribute('dir', 'rtl'); // Set Right-to-Left
+    // } else {
+    //   document.body.setAttribute('dir', 'ltr'); // Set Left-to-Right
+    // }
     this.translateService.use(language); // Use selected language
   }
 
