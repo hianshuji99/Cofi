@@ -84,4 +84,5 @@ export class GlobalizationService {
 
     return this.http.post(this.baseUrl + "Master/GetAttributesOrFlags", {  headers:this._headers });
   }
+  
 }
