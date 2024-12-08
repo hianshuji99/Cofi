@@ -17,11 +17,13 @@
                   <div class="form-group">  
                     <label for="languages"> {{'languages' | translate}} </label>  
                      <select class="form-control form-control-sm" name="language" id="language"  (change)="changeLanguage($event.target.value)">
-                      <option value="" disabled selected>Choose your Location</option>
-                      <option value="french">91EL Anaheim</option>
-                      <option value="greece">91EL OCTA Store</option>
-                      <option value="en-US">91EL CSC WIC</option>
-                      <option value="en-US">91EL Call Center</option>
+                      <option value="" disabled selected>Choose your Language</option>
+                    <option
+                      *ngFor="let l of languageMaster"
+                      [value]="l.LanguageCode"                   
+                      >
+                      {{ l.LanguageName }}
+                    </option>
                      </select>
                 </div>  
                   <button type="submit" class="btn btn-primary btn-block" (click)="gotoSearchPage()"> {{'signin' | translate}} </button>  

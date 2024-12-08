@@ -90,7 +90,13 @@ height: 35px;">
                         <div class="form-group">  
                             <label for="exampleInputEmail1"> {{'licenseplatecountry' | translate}} </label>  
                             <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('licenseplatecountry')" (focusout)="focusOutFunction('licenseplatecountry')" aria-describedby="emailHelp"  [ngStyle]="licenseplatecountry ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
-                            <option value="">-- Select -- </option>    
+                                <option
+                                *ngFor="let c of LicensePlateCountriesMaster"
+                                [value]="c.CountryID"                   
+                                >
+                                {{ c.CountryName | translate }}
+                              </option>
+
                             </select>
                         </div> 
                     </div> 
@@ -98,7 +104,12 @@ height: 35px;">
                         <div class="form-group">  
                             <label for="exampleInputEmail1"> {{'licenseplatestate' | translate}} </label>  
                             <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('licenseplatestate')" (focusout)="focusOutFunction('licenseplatestate')" aria-describedby="emailHelp"  [ngStyle]="licenseplatestate ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
-                                <option value="">-- Select -- </option>  
+                                <option
+                                *ngFor="let s of LicensePlateStatesMaster"
+                                [value]="s.StateID"                   
+                                >
+                                {{ s.StateName | translate }}
+                              </option> 
                             </select>
                         </div> 
                     </div> 
@@ -112,7 +123,12 @@ height: 35px;">
                         <div class="form-group">  
                             <label for="exampleInputEmail1"> {{'accounttypes' | translate}} </label>  
                             <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('accounttypes')" (focusout)="focusOutFunction('accounttypes')" aria-describedby="emailHelp"  [ngStyle]="accounttypes ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
-                                <option value="">-- Select -- </option>
+                                <option
+                                *ngFor="let a of AccountTypesMaster"
+                                [value]="a.AccountTypeID"                   
+                                >
+                                {{ a.AccountTypeName | translate }}
+                              </option> 
                             </select>
                         </div> 
                     </div>  
@@ -122,7 +138,12 @@ height: 35px;">
                         <div class="form-group">  
                             <label for="exampleInputEmail1"> {{'accountstatus' | translate}} </label>  
                             <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('accountstatus')" (focusout)="focusOutFunction('accountstatus')" aria-describedby="emailHelp"  [ngStyle]="accountstatus ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
-                                <option value="">-- Select -- </option>  
+                                  <option
+                                *ngFor="let a of AccountStatusesMaster"
+                                [value]="a.AccountStatusID"                   
+                                >
+                                {{ a.StatusName | translate }}
+                              </option>
                             </select>
                         </div> 
                     </div>  
@@ -130,7 +151,12 @@ height: 35px;">
                         <div class="form-group">  
                             <label for="exampleInputEmail1"> {{'attribute/flags' | translate}} </label>  
                             <select type="email" class="form-control form-control-sm" id="exampleInputEmail1" (focus)="focusFunction('attribute')" (focusout)="focusOutFunction('attribute')" aria-describedby="emailHelp"  [ngStyle]="attribute ? {'border-color': 'rgb(48 48 129)'} : {'border-right':'0px', 'border-left':'0px','border-top':'0px','border-radius':'0px','border-color': '#bebec3'}">
-                                <option value="">-- Select -- </option>
+                                <option
+                                *ngFor="let a of AttributesOrFlagsMaster"
+                                [value]="a.AttributeID"                   
+                                >
+                                {{ a.AttributeName | translate }}
+                              </option>
                             </select>
                         </div> 
                     </div>  

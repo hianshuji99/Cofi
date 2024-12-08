@@ -1,6 +1,8 @@
+import { Directionality } from '@angular/cdk/bidi';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { GlobalizationService } from 'src/app/Services/Globalization.service';
 
 @Component({
   selector: 'app-login-page',
@@ -8,16 +10,32 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-
-  constructor(public translateService: TranslateService, public router: Router,) {
+  languageMaster: any = [];
+  constructor(public translateService: TranslateService,private dir: Directionality, public router: Router,private service: GlobalizationService) {
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.GetLanguages();
   }
+  GetLanguages() {
 
+    this.service.GetLanguages().subscribe(
+      (result: any) => {
+        console.log('Request Sent Successfully', result.data);
+        this.languageMaster=result.data;
+      },
+      (error: any) => {
+        console.error('Error Sending Request', error);
+
+      }
+    );
+  }
   public changeLanguage(language: string): void {
-    debugger;
-    this.translateService.use(language);
+    if (language === 'AE' || language === 'IL') {
+      document.body.setAttribute('dir', 'rtl'); // Set Right-to-Left
+    } else {
+      document.body.setAttribute('dir', 'ltr'); // Set Left-to-Right
+    }
+    this.translateService.use(language); // Use selected language
   }
 
   onSubmit(){

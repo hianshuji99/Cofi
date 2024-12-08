@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalizationService } from 'src/app/Services/Globalization.service';
 
 @Component({
   selector: 'app-search-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: GlobalizationService) { }
 
   ngOnInit(): void {
+    this.GetAccountStatus();
+    this.GetAccountTypes();
+    this.GetAttributesOrFlags();
+    this.GetLicensePlateCountries();
+    this.GetLicensePlateStates();
   }
 
   account:boolean=false;
@@ -30,6 +36,77 @@ export class SearchPageComponent implements OnInit {
   address:boolean=false;
   city:boolean=false;
   zipcode:boolean=false;
+  AccountStatusesMaster: any = [];
+  AccountTypesMaster: any = [];
+  AttributesOrFlagsMaster: any = [];
+  LicensePlateCountriesMaster: any = [];
+  LicensePlateStatesMaster: any = [];
+
+  GetAccountStatus() {
+
+    this.service.GetAccountStatuses().subscribe(
+      (result: any) => {
+        console.log('Request Sent Successfully', result.data);
+        this.AccountStatusesMaster=result.data;
+      },
+      (error: any) => {
+        console.error('Error Sending Request', error);
+
+      }
+    );
+  }
+  GetAccountTypes() {
+
+    this.service.GetAccountTypes().subscribe(
+      (result: any) => {
+        console.log('Request Sent Successfully', result.data);
+        this.AccountTypesMaster=result.data;
+      },
+      (error: any) => {
+        console.error('Error Sending Request', error);
+
+      }
+    );
+  }
+  GetAttributesOrFlags() {
+
+    this.service.GetAttributesOrFlags().subscribe(
+      (result: any) => {
+        console.log('Request Sent Successfully', result.data);
+        this.AttributesOrFlagsMaster=result.data;
+      },
+      (error: any) => {
+        console.error('Error Sending Request', error);
+
+      }
+    );
+  }
+  GetLicensePlateCountries() {
+
+    this.service.GetLicensePlateCountries().subscribe(
+      (result: any) => {
+        console.log('Request Sent Successfully', result.data);
+        this.LicensePlateCountriesMaster=result.data;
+      },
+      (error: any) => {
+        console.error('Error Sending Request', error);
+
+      }
+    );
+  }
+  GetLicensePlateStates() {
+
+    this.service.GetLicensePlateStates().subscribe(
+      (result: any) => {
+        console.log('Request Sent Successfully', result.data);
+        this.LicensePlateStatesMaster=result.data;
+      },
+      (error: any) => {
+        console.error('Error Sending Request', error);
+
+      }
+    );
+  }
   focusFunction(str){
     if(str == 'account') this.account = true;
     if(str == 'phone') this.phone = true;
