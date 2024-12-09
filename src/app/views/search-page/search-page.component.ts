@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { GlobalizationService } from 'src/app/Services/Globalization.service';
 
 @Component({
@@ -8,9 +9,15 @@ import { GlobalizationService } from 'src/app/Services/Globalization.service';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor(private service: GlobalizationService) { }
+  countryName:string= "";
+  isArabic:boolean = false;
+
+  constructor(private service: GlobalizationService, public translateService: TranslateService,) { }
 
   ngOnInit(): void {
+    this.countryName = localStorage.getItem('selectedCountry');
+    this.translateService.use(this.countryName);
+    if(this.countryName == 'AE') this.isArabic = true;
     this.GetAccountStatus();
     this.GetAccountTypes();
     this.GetAttributesOrFlags();

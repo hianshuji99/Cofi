@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { GlobalizationService } from 'src/app/Services/Globalization.service';
@@ -10,9 +12,13 @@ import { GlobalizationService } from 'src/app/Services/Globalization.service';
 })
 export class LoginPageComponent implements OnInit {
   languageMaster: any = [];
+  loginForm: FormGroup;
   constructor(public translateService: TranslateService, public router: Router,private service: GlobalizationService) {
   }
   ngOnInit(): void {
+    this.loginForm = new FormGroup({
+      language: new FormControl(),
+    })
     this.GetLanguages();
   }
   GetLanguages() {
@@ -51,7 +57,10 @@ export class LoginPageComponent implements OnInit {
   }
 
   gotoSearchPage(){
-    this.router.navigate(['/search']);
+    let country = this.loginForm.get('language').value;
+    localStorage.setItem("selectedCountry", country);
+    if(country != null) this.router.navigate(['/search']);
+    else return;
   }
 
 }

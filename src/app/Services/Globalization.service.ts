@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalizationService {
 
-  baseUrl = "https://localhost:7053/api/";
+  baseUrl = "https://webpocapi-gmeqfeakfegqg9e0.centralindia-01.azurewebsites.net/api/";
 
   authToken: string = '';
   private _headers!: HttpHeaders;

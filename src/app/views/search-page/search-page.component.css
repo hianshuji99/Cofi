@@ -1,3 +1,6 @@
 .form-control:focus {
     box-shadow:none !important;
 }
+.arb{
+    direction: rtl;
+}

@@ -34,7 +34,7 @@
         </div>
     </div>
 </div>
-<div class="" style="background-color: #d9913c;">
+<div class="" style="background-color: #d9913c;" [ngClass]="isArabic ? 'arb' : ''" >
     <div class="" style="  margin: 0% 3%;">
         <img src="../../../assets/images/user.png" alt="" class="mx-5 my-2" style="    width: 35px;
             height: 35px;">
@@ -49,7 +49,7 @@ height: 35px;">
 height: 35px;">
     </div>
 </div>
-<div  style="  margin: 0% 3%;">
+<div  style="  margin: 0% 3%;" [ngClass]="isArabic ? 'arb' : ''">
         <h4 class="my-3">{{'customersearch' | translate}}</h4>
         <div class="card p-2">
             <div class="row">
@@ -207,9 +207,9 @@ height: 35px;">
                         </div> 
                     </div>
                 </div>
-                <div class="row mt-5">
-                    <button class="btn btn-primary" style="width: 5%;margin: 10px;">{{'search' | translate}}</button>
-                    <button class="btn btn-secondary" style="width: 5%;margin: 10px;">{{'reset' | translate}}</button>
+                <div class="mt-5">
+                    <button class="btn btn-primary" style="margin-right: 5px;">{{'search' | translate}}</button>
+                    <button class="btn btn-secondary">{{'reset' | translate}}</button>
                 </div>
             </div>
         </div>

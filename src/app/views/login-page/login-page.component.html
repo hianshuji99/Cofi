@@ -4,7 +4,7 @@
       <div class="card-body">  
           <img style="height: 100px;width: 100%;" src="../../../assets/images/logo.jpg" alt="">  
           <div class="card-text">  
-              <form>  
+              <form [formGroup]="loginForm" class="form-horizontal">  
                   <div class="form-group">  
                       <label for="exampleInputEmail1"> {{ 'userid' | translate }} </label>  
                       <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">  
@@ -16,7 +16,7 @@
                   </div>  
                   <div class="form-group">  
                     <label for="languages"> {{'languages' | translate}} </label>  
-                     <select class="form-control form-control-sm" name="language" id="language"  (change)="changeLanguage($event.target.value)">
+                     <select class="form-control form-control-sm" name="language" formControlName= "language" id="language"  (change)="changeLanguage($event.target.value)">
                       <option value="" disabled selected>Choose your Language</option>
                     <option
                       *ngFor="let l of languageMaster"
