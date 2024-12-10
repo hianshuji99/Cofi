@@ -8,14 +8,44 @@ import { GlobalizationService } from 'src/app/Services/Globalization.service';
   styleUrls: ['./search-page.component.css']
 })
 export class SearchPageComponent implements OnInit {
+  toggleLanguage() {
+    // Get the current language from localStorage
+    const currentLanguage = localStorage.getItem('language');
+    if (!currentLanguage) {
+      this.currentCountry=currentLanguage;
+    } else {
+      this.currentCountry=localStorage.getItem('selectedCountry') || 'EN';
+     }
+  
+    // Determine the new language for toggling
+    const newLanguage = currentLanguage !== 'EN' ? 'EN' : localStorage.getItem('selectedCountry') || 'EN';
+  
+    // Update the TranslateService and localStorage
+    this.translateService.use(newLanguage);
+    localStorage.setItem('language', newLanguage);
+    this.currentCountry=newLanguage;
+    // Set isArabic based on the new language
+    this.isArabic = (newLanguage === 'AE' || newLanguage === 'IL');
+  }
+  
+
+  
+
 
   countryName:string= "";
+  currentCountry:string= "";
   isArabic:boolean = false;
 
   constructor(private service: GlobalizationService, public translateService: TranslateService,) { }
 
   ngOnInit(): void {
     this.countryName = localStorage.getItem('selectedCountry');
+    const currentLanguage = localStorage.getItem('language');
+    if (currentLanguage) {
+      this.currentCountry=currentLanguage;
+    } else {
+      this.currentCountry=localStorage.getItem('countryName');
+     }
     this.translateService.use(this.countryName);
     if(this.countryName == 'AE') this.isArabic = true;
     this.GetAccountStatus();

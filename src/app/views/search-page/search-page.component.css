@@ -4,3 +4,42 @@
 .arb{
     direction: rtl;
 }
+.toggle__btn {
+    background: linear-gradient(90deg, #4caf50, #81c784); /* Green gradient for modern look */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    width: 140px; /* Adjusted width for icon and text */
+    height: 40px; /* Comfortable height */
+    font-size: 16px; /* Readable text size */
+    font-weight: bold; /* Bold text for emphasis */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically center icon and text */
+    justify-content: center; /* Horizontally center icon and text */
+    gap: 8px; /* Space between icon and text */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .toggle__btn:hover {
+    background: linear-gradient(90deg, #388e3c, #66bb6a); /* Slightly darker green on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight scaling for interactivity */
+  }
+  
+  .toggle__btn:active {
+    background: linear-gradient(90deg, #2e7d32, #4caf50); /* Darker gradient for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on active */
+    transform: scale(0.95); /* Slight shrink for click feedback */
+  }
+  
+  .toggle__btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Add focus ring for accessibility */
+  }
+  
+  .toggle__btn i {
+    font-size: 18px; /* Adjust icon size */
+  }
+  

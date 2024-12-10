@@ -40,6 +40,7 @@ export class LoginPageComponent implements OnInit {
     // } else {
     //   document.body.setAttribute('dir', 'ltr'); // Set Left-to-Right
     // }
+    localStorage.setItem('language', language);
     this.translateService.use(language); // Use selected language
   }
 
